@@ -1,4 +1,9 @@
 @use './variables' as *;
+.flex-align {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+}
 .button-main {
 	border: none;
 	outline: none;
@@ -22,7 +27,17 @@
 		font-family: inherit;
 	}
 }
-
+.flex-center {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+}
+.flex-align-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
 .mg {
 	&-top {
 		margin-top: 2rem;
@@ -88,17 +103,19 @@
 		margin: 0;
 		padding: 0;
 	}
+	&-title {
+		font-size: 5.4rem;
+		font-weight: 300;
+		span {
+			display: block;
+		}
+	}
 }
 
 ::placeholder {
 	color: $color-grey;
 }
 
-.input {
-	border: none;
-	outline: none;
-	font-size: 1.4rem;
-}
 .logo {
 	font-family: Black Ops One;
 	font-size: 4.5rem;
@@ -120,4 +137,9 @@
 .icons {
 	font-size: 2rem;
 	cursor: pointer;
+}
+
+.active {
+	font-weight: 900;
+	font-size: 2rem;
 }

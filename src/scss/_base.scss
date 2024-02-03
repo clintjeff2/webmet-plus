@@ -4,12 +4,19 @@ html {
 	// margin: 0;
 }
 
+@media screen and (max-width: 1200px) {
+	html {
+		font-size: 50%;
+	}
+}
+
 body {
 	margin: 0;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: Josefin Sans;
+	font-family: Nunito;
+	// font-family: Josefin Sans;
 	font-size: 1.6rem;
 	background-color: $color-grey-light;
 }

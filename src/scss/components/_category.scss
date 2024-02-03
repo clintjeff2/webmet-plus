@@ -1,0 +1,48 @@
+@use './../variables' as *;
+.category-section {
+	width: 80vw;
+	// border: 1px solid orange;
+	overflow-x: auto;
+	margin-left: auto;
+	margin-right: auto;
+
+	&::-webkit-scrollbar-thumb {
+		background-color: transparent;
+		border-radius: 10px;
+		width: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+		width: 5px;
+	}
+	&::-webkit-scrollbar {
+		border-radius: 10px;
+		width: 5px;
+	}
+}
+.category {
+	// border: 2px solid $color-primary;
+	background-color: rgba($color-grey, 0.2);
+	border-radius: 1rem;
+	&-text {
+		flex-direction: column;
+		gap: .8rem;
+		margin-left: .7rem;
+		.text {
+			font-size: 3rem;
+			display: block;
+			font-weight: 300;
+			max-width: 18rem;
+			text-transform: capitalize;
+		}
+		a {
+			align-self: flex-start;
+			color: $color-primary-light;
+			text-decoration: none;
+			border-bottom: 2px solid $color-primary-light;
+		}
+	}
+	& .cat-pic {
+		height: 12rem;
+	}
+}

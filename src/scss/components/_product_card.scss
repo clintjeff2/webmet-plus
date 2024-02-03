@@ -1,0 +1,53 @@
+@use './../variables' as *;
+
+.products {
+	width: 90%;
+	flex-wrap: wrap !important;
+	margin: 4rem auto;
+	gap: 4.5rem;
+}
+
+.product-card {
+	border-radius: 0.4rem;
+	overflow: hidden;
+	width: 35rem !important;
+	position: relative;
+	background-color: rgba($color-grey, 0.1);
+	&--image {
+		height: 35rem;
+	}
+	&--details {
+		padding: 1.5rem;
+		justify-content: space-between;
+		.name {
+			font-weight: bold;
+		}
+		.shop-cart {
+			font-size: 3rem;
+			font-weight: bolder;
+			cursor: pointer;
+			color: $color-grey;
+		}
+	}
+	&--info {
+		gap: 0.8rem;
+		flex-direction: column;
+	}
+	.fav {
+		font-size: 3rem;
+		cursor: pointer;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		color: $color-white;
+		height: 6rem;
+		width: 6rem;
+		border-radius: 100%;
+		background-color: rgba($color-primary-light, 1);
+		transition: all 0.4s;
+
+		&:hover {
+			color: $color-red;
+		}
+	}
+}

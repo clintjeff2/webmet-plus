@@ -1,0 +1,80 @@
+@use './../variables' as *;
+
+.header-simple {
+	background: linear-gradient(
+			to right bottom,
+			rgba($color-primary, 0.5),
+			rgba($color-primary-dark, 0.5),
+			rgba($color-primary-light, 0.5)
+		),
+		url('./../../assets/images/shop-pic.jpg');
+	height: 30rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 4.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.header {
+	justify-content: space-between;
+	// border: 1px solid red;
+	background-color: rgba($color-primary-light, 0.3);
+	& .content {
+		margin-left: 3rem;
+		& .text {
+			max-width: 60rem;
+			display: block;
+			line-height: 1.7;
+		}
+	}
+
+	& .image {
+		// border: 1px solid red;
+		position: relative;
+		transform: translate(-2rem, 2rem);
+		img.pic-sale {
+			// position: absolute;
+			transform: translate(-200%, 0%);
+		}
+		.compu {
+			width: 80%;
+			min-width: 60rem;
+		}
+	}
+}
+@media screen and (max-width: 1000px) {
+	.header {
+		justify-content: space-between;
+		.content {
+			text-align: justify;
+			text-wrap: wrap;
+			margin-left: 2rem;
+			& .text {
+				max-width: 80rem;
+				margin-right: 2rem;
+			}
+		}
+	}
+}
+.cat {
+	display: none;
+}
+@media screen and (max-width: 500px) {
+	.cat {
+		display: block;
+		margin: 3rem 0rem -5rem 3rem;
+	}
+}
+@media screen and (max-width: 800px) {
+	.header {
+		flex-direction: column !important;
+
+		.image {
+			transform: translate(0, 0);
+		}
+	}
+}

@@ -1,0 +1,69 @@
+@use './../variables' as *;
+
+.footer {
+	background-color: $color-black;
+
+	padding: 4rem;
+	.card {
+		gap: 2rem;
+		color: white;
+		background-color: #100f0f;
+		border: 1px solid $color-grey;
+		width: 35rem;
+		padding: 2rem;
+		.icon {
+			font-size: 3.5rem;
+			width: 10%;
+		}
+
+		.desc {
+			gap: 1rem;
+			flex-direction: column;
+			font-weight: 100;
+			width: 85%;
+
+			.title {
+				font-size: 2.5rem;
+			}
+			.text-sm {
+				font-size: 2rem;
+			}
+			.text-lg {
+				font-size: 2.8rem;
+				color: $color-primary;
+			}
+		}
+	}
+	.line {
+		border: 1px solid $color-grey;
+		width: 80%;
+		margin: 6rem auto 3rem auto;
+	}
+
+	.foot {
+		width: 80%;
+		margin: 1rem auto;
+		color: $color-grey-dark;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		img {
+			height: 7rem;
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.foot,
+		.line {
+			width: 98%;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.card-container {
+		flex-direction: column;
+	}
+}
