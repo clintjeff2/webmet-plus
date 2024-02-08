@@ -3,11 +3,12 @@ import { NavMain, NavSearch } from '../../components/headers';
 import HeaderMain from '../../components/headers/HeaderMain';
 import Category from '../../components/Category';
 
-import { product as items } from '../../assets/data/productDetails';
 import ProductCard from '../../components/ProductCard';
 import Footer from '../../components/Footer';
+import { useSelector } from 'react-redux';
 
 function Home() {
+	const products = useSelector((state) => state.shop.products);
 	return (
 		<React.Fragment>
 			<NavMain />
@@ -16,9 +17,9 @@ function Home() {
 			<br />
 			<NavSearch />
 			<HeaderMain />
-			<h2 className='cat'>Categories</h2>
+			<h2 className="cat">Categories</h2>
 			<div className="category-section flex-align mg-top-lg">
-				{items.map((product) => {
+				{products.map((product) => {
 					return (
 						<Category
 							name={product.category}
@@ -30,7 +31,7 @@ function Home() {
 				})}
 			</div>
 			<div className="products flex-align-center">
-				{items.map((products) => {
+				{products.map((products) => {
 					return products.products.map((product) => {
 						return <ProductCard key={product.id} product={product} />;
 					});

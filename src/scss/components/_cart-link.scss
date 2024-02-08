@@ -1,0 +1,19 @@
+@use './../variables' as *;
+
+.cart-link {
+	// background-color: red;
+	width: 80%;
+	margin: 2rem auto;
+	border: 1px solid $color-primary;
+	border-radius: 1.5rem;
+	display: flex;
+	padding: 1.5rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+	.cart-link {
+		width: 100%;
+	}
+}

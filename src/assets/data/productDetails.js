@@ -83,7 +83,7 @@ export const product = [
 		coverPhoto: computerCover,
 		products: [
 			{
-				id: 'lkk123',
+				id: 'lkk1234',
 				productName: 'Asus | 8GB RAM | 1TB Internal Mem| 2GB Dedicated',
 				price: 549,
 				currency: '$',
@@ -94,7 +94,7 @@ export const product = [
 					'The ASUS ROG Strix GL12CX desktop delivers high-performance gaming with customizable RGB lighting, liquid cooling, and powerful components, catering to enthusiasts seeking top-tier gaming experiences.',
 			},
 			{
-				id: 'jdhe123',
+				id: 'jdhe1231',
 				productName: 'DELL | 16GB RAM | 1TB Internal Mem| 1GB Dedicated',
 				price: 599,
 				currency: '$',
@@ -105,7 +105,7 @@ export const product = [
 					'The Dell XPS Desktop combines sleek design with powerful performance, featuring high-end processors and graphics for productivity and content creation in a compact form factor.',
 			},
 			{
-				id: 'jdhe098',
+				id: 'jdhe0981',
 				productName: 'Apple MAC | 64GB RAM | 4TB Internal Mem| 6GB Dedicated',
 				price: 1299,
 				currency: '$',
@@ -123,7 +123,7 @@ export const product = [
 		coverPhoto: laptopCover,
 		products: [
 			{
-				id: 'lkk123',
+				id: 'lkk1235',
 				productName:
 					'Accer | 8GB RAM | 1TB Internal Mem| 2GB Dedicated| corei3',
 				price: 399,
@@ -135,7 +135,7 @@ export const product = [
 					'The Acer Swift 3 features a sleek aluminum design, a vibrant IPS display, and impressive battery life, offering a well-balanced and affordable option for everyday computing.',
 			},
 			{
-				id: 'jdhe123',
+				id: 'jdhe1232',
 				productName:
 					'DELL | 16GB RAM | 1TB Internal Mem| 1GB Dedicated: corei7',
 				price: 190,
@@ -147,7 +147,7 @@ export const product = [
 					'The Dell XPS 13 boasts a virtually borderless InfinityEdge display, powerful performance, and a compact design, making it an ideal ultrabook for on-the-go professionals.',
 			},
 			{
-				id: 'jdhe098',
+				id: 'jdhe0982',
 				productName:
 					'Apple MAC | 64GB RAM | 4TB Internal Mem| 6GB Dedicated: corei7',
 				price: 999,
@@ -166,7 +166,7 @@ export const product = [
 		coverPhoto: cameraCover,
 		products: [
 			{
-				id: 'lkk123',
+				id: 'lkk1236',
 				productName: '61MP Full-Frame Sensor, 10fps, 4K Video, 5-axis IBIS.',
 				price: 3499,
 				currency: '$',
@@ -177,7 +177,7 @@ export const product = [
 					'Offering a balanced 24.5MP full-frame sensor, 4K video, and in-body stabilization, the Nikon Z6 excels in low-light conditions and ensures steady shots in diverse shooting scenarios.',
 			},
 			{
-				id: 'jdhe123',
+				id: 'jdhe1233',
 				productName: '30.4MP Full-Frame, 7fps, 4K Video, Dual Pixel AF.',
 				price: 2499,
 				currency: '$',
@@ -188,7 +188,7 @@ export const product = [
 					'Offering a balanced 24.5MP full-frame sensor, 4K video, and in-body stabilization, the Nikon Z6 excels in low-light conditions and ensures steady shots in diverse shooting scenarios.',
 			},
 			{
-				id: 'jdhe098',
+				id: 'jdhe0983',
 				productName:
 					'24.5MP Full-Frame, 12fps, 4K Video, In-Body Stabilization.',
 				price: 1290000,
@@ -207,7 +207,7 @@ export const product = [
 		coverPhoto: headphoneCover,
 		products: [
 			{
-				id: 'lkk123',
+				id: 'lkk1237',
 				productName: 'Sony WH-1000XM4',
 				price: 349.99,
 				currency: '$',
@@ -218,7 +218,7 @@ export const product = [
 					'Sony WH-1000XM4 over-ear headphones feature industry-leading noise cancellation, exceptional sound quality, touch controls, and a comfortable design, making them ideal for immersive audio experiences.',
 			},
 			{
-				id: 'jdhe123',
+				id: 'jdhe1234',
 				productName: 'Bose QuietComfort 35 II',
 				price: 299.95,
 				currency: '$',
@@ -229,7 +229,7 @@ export const product = [
 					'Sennheiser HD 660 S open-back headphones deliver high-fidelity audio with a natural soundstage, providing an audiophile-grade listening experience for discerning music enthusiasts.',
 			},
 			{
-				id: 'jdhe098',
+				id: 'jdhe0984',
 				productName: 'Sennheiser HD 660 S',
 				price: 499.95,
 				currency: '$',

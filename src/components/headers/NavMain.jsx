@@ -1,17 +1,17 @@
 import React from 'react';
-import { NavLink, Link} from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 function NavMain() {
 	return (
 		<nav className="main-nav flex-align">
-			<Link to={'/shop'} className="logo">
+			<Link to={'/home'} className="logo">
 				webmat+
 			</Link>
 			<NavLink to={'/'} className="home">
 				Home
 			</NavLink>
-			<NavLink to={'/shop'} className="shop">
-				Shop
+			<NavLink to={'/cart'} className="shop">
+				Cart
 			</NavLink>
 			<NavLink to={'/favorites'} className="track">
 				Favorites

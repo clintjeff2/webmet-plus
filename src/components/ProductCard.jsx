@@ -1,11 +1,97 @@
 import React from 'react';
 import ReactStars from 'react-rating-stars-component';
 import { BsCartPlus } from 'react-icons/bs';
-import { FaHeart } from "react-icons/fa";
+import { FaHeart } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	addFavorite,
+	addToCart,
+	updateFavorite,
+	updateProduct,
+} from '../store/shopSlice';
+import { Link } from 'react-router-dom';
 
 function ProductCard({ product }) {
+	const products = useSelector((state) => state.shop.products);
+	const favs = useSelector((state) => state.shop.fav);
+	const dispatch = useDispatch();
+
 	const ratingChanged = (newRating, os) => {
 		console.log(newRating, os);
+	};
+
+	const handleRemoveFavorite = (id, fav) => {
+		let obj = { isFavorite: false };
+
+		let prod = products.map((el) => {
+			let ele = [];
+			el.products.filter((item) => {
+				if (item.id === id) {
+					obj = { ...item, ...obj };
+					item = { ...obj };
+				}
+				ele.push(item);
+				return item;
+			});
+			// console.log(ele);
+			return { ...el, products: ele };
+		});
+
+		dispatch(updateProduct(prod));
+
+		const newFavs = favs.filter((el) => el.id !== id);
+
+		dispatch(updateFavorite(newFavs));
+	};
+	const handleAddFavorite = (id, fav) => {
+		let obj = { isFavorite: true };
+
+		let prod = products.map((el) => {
+			let ele = [];
+			el.products.filter((item) => {
+				if (item.id === id) {
+					obj = { ...item, ...obj };
+					item = { ...obj };
+				}
+				ele.push(item);
+				return item;
+			});
+			// console.log(ele);
+			return { ...el, products: ele };
+		});
+
+		if (fav !== true) {
+			dispatch(addFavorite(obj));
+			dispatch(updateProduct(prod));
+		}
+
+		// console.log(fav);
+		if (fav === true) {
+			handleRemoveFavorite(id, fav);
+		}
+	};
+
+	const handleAddToCart = (id, inCart) => {
+		let obj = { inCart: true };
+
+		let prod = products.map((el) => {
+			let ele = [];
+			el.products.filter((item) => {
+				if (item.id === id) {
+					obj = { ...item, ...obj };
+					item = { ...obj };
+				}
+				ele.push(item);
+				return item;
+			});
+			// console.log(ele);
+			return { ...el, products: ele };
+		});
+
+		if (inCart !== true) {
+			dispatch(addToCart(obj));
+			dispatch(updateProduct(prod));
+		}
 	};
 	return (
 		<div className="product-card">
@@ -27,14 +113,22 @@ function ProductCard({ product }) {
 							activeColor="#ffd700"
 						/>
 					</span>
-					<span className="name">{product.productName}</span>
+					<Link to={`/shop/${product.id}`} className="name">{product.productName}</Link>
 					<span className="price">$ {product.price}</span>
 				</div>
-				<span className="shop-cart">
+				<span
+					className="shop-cart"
+					onClick={() => handleAddToCart(product.id, product?.inCart)}
+				>
 					<BsCartPlus />
 				</span>
 			</div>
-			<span className="fav flex-align-center"><FaHeart /></span>
+			<span
+				className="fav flex-align-center"
+				onClick={() => handleAddFavorite(product.id, product?.isFavorite)}
+			>
+				<FaHeart className={`${product?.isFavorite ? 'red' : ''}`} />
+			</span>
 		</div>
 	);
 }

@@ -2,8 +2,10 @@ import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { GrFavorite } from 'react-icons/gr';
 import { TiShoppingCart } from 'react-icons/ti';
+import { useSelector } from 'react-redux';
 
 function NavSearch() {
+	const nums = useSelector((state) => state.shop);
 	return (
 		<React.Fragment>
 			<div className="search">
@@ -25,11 +27,15 @@ function NavSearch() {
 					<div className="reactions flex-align-center">
 						<span className="section-icon">
 							<GrFavorite className="icons" />
-							<span className="number flex-align-center">0</span>
+							<span className="number flex-align-center">
+								{nums.fav.length}
+							</span>
 						</span>
 						<span className="section-icon">
 							<TiShoppingCart className="icons" />
-							<span className="number flex-align-center">0</span>
+							<span className="number flex-align-center">
+								{nums.cart.length}
+							</span>
 						</span>
 					</div>
 				</div>
