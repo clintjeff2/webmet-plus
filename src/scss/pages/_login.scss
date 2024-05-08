@@ -1,0 +1,45 @@
+@use './../variables' as *;
+
+.login {
+	height: 70vh;
+	max-width: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		border: 2px solid $color-primary-light;
+    padding: 10rem;
+    border-radius: 3rem;
+
+		& .input {
+			label,
+			input {
+				display: block;
+				font-size: 2rem;
+			}
+
+			input {
+				border-radius: 100px;
+				border: 2px solid $color-primary;
+				padding: 1rem;
+			}
+
+			input:focus {
+				border: 2px solid $color-primary;
+			}
+		}
+
+		button {
+			background-color: $color-primary;
+			border: none;
+			color: white;
+			font-size: 2rem;
+			border-radius: 100px;
+			padding: 1.5rem;
+		}
+	}
+}

@@ -16,6 +16,9 @@ function NavMain() {
 			<NavLink to={'/favorites'} className="track">
 				Favorites
 			</NavLink>
+			<NavLink to={'/login'} className="track">
+				Login
+			</NavLink>
 			<span>Call us at (+237) 645389117</span>
 		</nav>
 	);

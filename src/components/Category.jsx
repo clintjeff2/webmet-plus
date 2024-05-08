@@ -6,7 +6,7 @@ function Category({ name, photo, linkID }) {
 		<div className="category flex-align">
 			<div className="category-text flex-align">
 				<span className="text">{name}</span>
-				<Link to={`/shop/${linkID}`}>Shop Now</Link>
+				<Link to={`#`}>Shop Now</Link>
 			</div>
 			<img src={photo} className="cat-pic" alt="A description of the phones" />
 		</div>
