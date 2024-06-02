@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './admin.scss';
 
 function AdminSideNav() {
+	const user = JSON.parse(localStorage.getItem('user'));
 	return (
 		<div className="admin">
 			<div className="sth">
@@ -12,7 +13,7 @@ function AdminSideNav() {
 						alt="The logo we have"
 					/>
 				</header>
-				<p>Welcome (Raisa)</p>
+				<p>Welcome {user ? user.email.split('@')[0] : ''}</p>
 				<nav>
 					<li>
 						<NavLink to={'/dashboard'}>Dashboard</NavLink>
@@ -31,6 +32,9 @@ function AdminSideNav() {
 					</li>
 					<li>
 						<NavLink to={'/remove-product'}>Remove Product</NavLink>
+					</li>
+					<li>
+						<NavLink to={'/home'}>Log Out</NavLink>
 					</li>
 				</nav>
 			</div>

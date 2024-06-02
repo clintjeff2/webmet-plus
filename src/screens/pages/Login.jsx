@@ -11,7 +11,8 @@ function Login() {
 		e.preventDefault();
 
 		if (email === 'indjikeaurelie@gmail.com' && password === 'aurelie123') {
-			window.location.href = 'http://localhost:3000/dashboard';
+			localStorage.setItem('user', JSON.stringify({ email, password }));
+			navigate('/dashboard');
 		} else {
 			alert('Wrong details provided, please try again!!');
 		}

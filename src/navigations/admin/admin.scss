@@ -3,7 +3,7 @@
 	width: 400px;
 	box-shadow: 1px 1px 3px black;
 	border: 1px solid black;
-  position: fixed;
+	position: fixed;
 
 	& header {
 		height: 200px;
@@ -11,7 +11,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-    margin-top: 70px;
+		margin-top: 40px;
 		& img {
 			height: 150px;
 			width: 150px;
@@ -19,26 +19,26 @@
 		}
 	}
 
-  & p{
-    font-weight: bolder;
-    font-size: 35px;
-    text-align: center;
-  }
+	& p {
+		font-weight: bolder;
+		font-size: 35px;
+		text-align: center;
+	}
 
-  & nav {
-    padding: 25px 40px;
-    & li {
-      list-style-type: none;
-      padding: 15px 20px;
-      background-color: #dbccb7;
-      border-radius: 6px;
-      margin-top: 15px;
+	& nav {
+		padding: 25px 40px;
+		& li {
+			list-style-type: none;
+			padding: 15px 20px;
+			background-color: #dbccb7;
+			border-radius: 6px;
+			margin-top: 15px;
 
-      a {
-        text-decoration: none;
-        color: black;
-        display: block;
-      }
-    }
-  }
+			a {
+				text-decoration: none;
+				color: black;
+				display: block;
+			}
+		}
+	}
 }
