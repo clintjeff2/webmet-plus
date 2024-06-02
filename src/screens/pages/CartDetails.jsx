@@ -1,17 +1,17 @@
 import React from 'react';
 import { NavMain, NavSearch } from '../../components/headers';
-import HeaderMain from '../../components/headers/HeaderMain';
-import { product as items } from '../../assets/data/productDetails';
 import Footer from '../../components/Footer';
 import HeaderSimple from '../../components/HeaderSimple';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCart, updateProduct } from '../../store/shopSlice';
+import { useNavigate } from 'react-router-dom';
 
 function CartDetails() {
 	const cart = useSelector((state) => state.shop.cart);
 	const products = useSelector((state) => state.shop.products);
 	const dispatch = useDispatch();
+	const navigation = useNavigate();
 	const handleRemove = (id) => {
 		let newCart = cart.filter((el) => el.id !== id);
 		dispatch(updateCart(newCart));
@@ -158,8 +158,11 @@ function CartDetails() {
 
 				<div className="cart-totals">
 					<h4 className="totals">Cart Totals</h4>
-					<span>Total: $ {handleTotalPrice()}</span>
-					<button className="button-main button-main-medium">
+					<span>Total: XAF {handleTotalPrice()}</span>
+					<button
+						className="button-main button-main-medium"
+						onClick={() => navigation('/make-order')}
+					>
 						Proceed to Checkout
 					</button>
 				</div>

@@ -114,7 +114,7 @@ function ProductCard({ product }) {
 						/>
 					</span>
 					<Link to={`/shop/${product.id}`} className="name">{product.productName}</Link>
-					<span className="price">$ {product.price}</span>
+					<span className="price" style={{fontWeight: 'bold', color: 'blue'}}>XAF {product.price}</span>
 				</div>
 				<span
 					className="shop-cart"

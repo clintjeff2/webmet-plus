@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavMain from './../../components/headers/NavMain';
 import Footer from './../../components/Footer';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
 	const navigate = useNavigate();
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
 	function handleSubmit(e) {
 		e.preventDefault();
 
-		navigate('/home');
+		if (email === 'indjikeaurelie@gmail.com' && password === 'aurelie123') {
+			window.location.href = 'http://localhost:3000/dashboard';
+		} else {
+			alert('Wrong details provided, please try again!!');
+		}
 	}
 	return (
 		<React.Fragment>
@@ -22,11 +28,21 @@ function Login() {
 						<h2>Login</h2>
 						<div className="input">
 							<label htmlFor="email">Email: </label>
-							<input type="email" id="email" />
+							<input
+								type="email"
+								id="email"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
 						</div>
 						<div className="input">
 							<label htmlFor="password">Password: </label>
-							<input type="password" id="password" />
+							<input
+								type="password"
+								id="password"
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
+							/>
 						</div>
 						<button onClick={handleSubmit}>Submit</button>
 					</form>

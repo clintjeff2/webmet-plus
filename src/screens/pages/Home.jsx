@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavMain, NavSearch } from '../../components/headers';
 import HeaderMain from '../../components/headers/HeaderMain';
 import Category from '../../components/Category';
 
 import ProductCard from '../../components/ProductCard';
 import Footer from '../../components/Footer';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllStoreProduct } from '../../store/shopSlice';
 
 function Home() {
-	const products = useSelector((state) => state.shop.products);
+	const storeProducts = useSelector((state) => state.shop.storeProducts);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getAllStoreProduct());
+	}, [dispatch]);
+
+	const products = [...storeProducts];
 	return (
 		<React.Fragment>
 			<NavMain />

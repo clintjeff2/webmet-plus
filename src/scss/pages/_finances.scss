@@ -1,0 +1,39 @@
+.finances {
+	display: flex;
+	gap: 50px;
+	height: 100vh;
+
+	& .main {
+		align-self: flex-start;
+		margin-left: 450px;
+
+		& .main-1 {
+			width: 100%;
+			margin-right: 40px;
+
+			& .section {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				gap: 20px;
+				background-color: #fff;
+				padding:50px 10px;
+
+				& .item {
+					padding:60px 20px;
+					background-color: green;
+					color: #fff;
+					display: flex;
+					gap: 10px;
+					flex-direction: column;
+					width: 28%;
+					align-items: center;
+					border-radius: 6px;
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}

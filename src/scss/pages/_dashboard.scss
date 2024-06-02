@@ -1,0 +1,88 @@
+.dashboard {
+	display: flex;
+	gap: 50px;
+	height: 100vh;
+  
+
+	& .main {
+		align-self: flex-start;
+    margin-left: 450px;
+
+		& .main-1 {
+			width: 100%;
+
+			.abbrev {
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+
+				& .bar {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+					justify-content: center;
+					align-items: center;
+					width: 400px;
+					box-shadow: 1px 1px 2px black;
+					padding: 20px;
+					border-radius: 10px;
+
+					.title {
+						font-size: 24px;
+						color: #dbccb7;
+						font-weight: bold;
+					}
+
+					.value {
+						font-size: 32px;
+						color: black;
+						font-weight: bolder;
+					}
+					.percent {
+						font-size: 20px;
+					}
+				}
+			}
+
+			& .all-products {
+				& .item-container {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 25px;
+					align-items: center;
+					justify-content: center;
+					padding: 20px 30px;
+					box-shadow: 1px 1px 2px black;
+					margin-right: 20px;
+
+					& .item {
+						width: 300px;
+						background-color: #fff;
+						padding-bottom: 30px;
+						border-radius: 10px;
+						overflow: hidden;
+
+						& img {
+							width: 100%;
+							margin-bottom: 10px;
+						}
+
+						& span.amount {
+							font-size: 24px;
+							font-weight: bold;
+							display: block;
+							text-align: center;
+						}
+						& span.name {
+							font-size: 22px;
+							display: block;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}

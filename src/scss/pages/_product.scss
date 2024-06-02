@@ -1,0 +1,15 @@
+.product {
+	display: flex;
+	gap: 50px;
+	height: 100vh;
+
+	& .main {
+		align-self: flex-start;
+		margin-left: 450px;
+
+		& .main-1 {
+			width: 100%;
+			margin-right: 40px;
+		}
+	}
+}
